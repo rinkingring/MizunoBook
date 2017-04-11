@@ -1,0 +1,8 @@
+<h1><%= @user.email %>さんのページ</h1>
+<% @user.articles.each do |article| %>
+		<span><%= article.title %></span>	:
+		<span><%= article.user.email %></span><br>
+		
+<% end %>
+
+<%= f.hidden_field :article_id, :value => @article.id %>
